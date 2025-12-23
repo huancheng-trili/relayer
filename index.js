@@ -23,8 +23,7 @@ async function forwardToEtherlink(data) {
 }
 
 const abi = JSON.parse(fs.readFileSync('dummy.abi', 'utf8'));
-const args = process.argv.slice(2);
-const gatewayContractAddress = args[0];
+const gatewayContractAddress = "0x0040489c7C240D0c3b1e9Ff936b4dbb8019a512e";
 const provider = new ethers.WebSocketProvider("wss://base-sepolia-rpc.publicnode.com");
 
 const gatewayContract = new ethers.Contract(gatewayContractAddress, abi, provider);
