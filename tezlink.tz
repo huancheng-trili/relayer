@@ -1,0 +1,17 @@
+parameter (bytes %newIntent);
+storage   (map bytes bytes);
+code
+  {
+    UNPAIR;     # @parameter : @storage
+    # == newIntent ==
+    # k = sp.keccak(data) # @parameter : @storage
+    DUP;        # @parameter : @parameter : @storage
+    KECCAK;     # bytes : @parameter : @storage
+    SWAP;       # @parameter : bytes : @storage
+    # self.data.intents[k] = data # @parameter : bytes : @storage
+    SOME;       # option bytes : bytes : @storage
+    SWAP;       # bytes : option bytes : @storage
+    UPDATE;     # map bytes bytes
+    NIL operation; # list operation : map bytes bytes
+    PAIR;       # pair (list operation) (map bytes bytes)
+  };

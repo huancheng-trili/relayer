@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@taquito/taquito": "^23.1.0",
+    "bn.js": "^5.2.2",
     "ethers": "^6.16.0"
   }
 }
