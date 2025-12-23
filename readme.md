@@ -52,8 +52,8 @@ forge create etherlink.sol:SimpleContract --rpc-url $ETHERLINK_GHOSTNET_RPC_URL 
 
 ## Run source-hub relayer
 
-* Update contract addresses in `index.js`
-* `npm run run`
+- Update contract addresses in `index.js`
+- `npm run run`
 
 ### Send a dummy intent
 
