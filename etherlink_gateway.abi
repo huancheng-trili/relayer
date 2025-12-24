@@ -1,0 +1,98 @@
+[
+  {
+    "type": "receive",
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "completeIntent",
+    "inputs": [
+      {
+        "name": "action",
+        "type": "uint8",
+        "internalType": "enum GatewayContract.Actions"
+      },
+      {
+        "name": "asset",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "network",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "destAddr",
+        "type": "address",
+        "internalType": "address payable"
+      },
+      {
+        "name": "proof",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "submitIntent",
+    "inputs": [
+      {
+        "name": "action",
+        "type": "uint8",
+        "internalType": "enum GatewayContract.Actions"
+      },
+      {
+        "name": "asset",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "network",
+        "type": "string",
+        "internalType": "string"
+      },
+      {
+        "name": "destAddr",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "IntentSubmissionEvent",
+    "inputs": [
+      {
+        "name": "action",
+        "type": "uint8",
+        "indexed": false,
+        "internalType": "enum GatewayContract.Actions"
+      },
+      {
+        "name": "asset",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "network",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      {
+        "name": "destAddr",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  }
+]
