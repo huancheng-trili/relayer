@@ -1,0 +1,90 @@
+{
+  "address": "AcsdpNsoggiK1PkpWNk2PJwd4Gq4Ph2JGbfe6Tbequ1V",
+  "metadata": {
+    "name": "gateway",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "submit_intent",
+      "discriminator": [159, 255, 153, 9, 149, 139, 73, 112],
+      "accounts": [
+        {
+          "name": "user",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "action",
+          "type": {
+            "defined": {
+              "name": "Action"
+            }
+          }
+        },
+        {
+          "name": "asset",
+          "type": "string"
+        },
+        {
+          "name": "network",
+          "type": "string"
+        },
+        {
+          "name": "dest_addr",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "IntentSubmissionEvent",
+      "discriminator": [69, 177, 246, 167, 80, 144, 248, 38]
+    }
+  ],
+  "types": [
+    {
+      "name": "Action",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Transfer"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IntentSubmissionEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "action",
+            "type": {
+              "defined": {
+                "name": "Action"
+              }
+            }
+          },
+          {
+            "name": "asset",
+            "type": "string"
+          },
+          {
+            "name": "network",
+            "type": "string"
+          },
+          {
+            "name": "dest_addr",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
